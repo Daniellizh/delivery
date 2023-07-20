@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\CourierServiceInterface;
 
+use App\Services\UkrPoshtaService;
+
 class DeliveryController extends Controller
 {
     private $courierService;
 
-    public function __construct(CourierServiceInterface $courierService)
+    public function __construct(UkrPoshtaService $courierService)
     {
         $this->courierService = $courierService;
     }

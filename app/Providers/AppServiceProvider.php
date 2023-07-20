@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use App\Services\CourierServiceInterface;
 use App\Services\NovaPoshtaService;
 
+use App\Services\UkrPoshtaService;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -16,6 +18,8 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(CourierServiceInterface::class, NovaPoshtaService::class);
+
+        $this->app->bind(UkrPoshtaService::class, UkrPoshtaService::class);
     }
 
     /**
